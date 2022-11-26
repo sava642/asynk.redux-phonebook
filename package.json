@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "asynk.redux-pfonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goitacademy.github.io/react-homework-template/",
+  "homepage": "https://sava642.github.io/asynk.redux-pfonebook/",
   "dependencies": {
     "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.0",
