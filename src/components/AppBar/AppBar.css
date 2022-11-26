@@ -47,7 +47,6 @@ h6 span {
 .row {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
 [type="checkbox"]:checked,
