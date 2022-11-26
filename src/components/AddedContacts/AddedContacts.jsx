@@ -6,13 +6,14 @@ import { IoMdClose } from "react-icons/io";
 import { SetFilter } from "../SetFilter/SetFilter";
 import Swal from 'sweetalert2'
 import './AddedContacts.css';
+import { selectContacts, selectStatusFilter } from "components/redux/selectors";
 
 
 export const AddedContacts = () => {
 
 	const dispatch = useDispatch()
-	const arrayContacts = useSelector(state => state.contacts.arrContacts)
-	const filter = useSelector(state => state.filters)
+	const arrayContacts = useSelector(selectContacts)
+	const filter = useSelector(selectStatusFilter)
 	const getVisiblContacts = arrayContacts.filter(contact =>
 		contact.name.toLowerCase().includes(filter.toLowerCase()))
 	if (filter.length && getVisiblContacts.length === 0) {

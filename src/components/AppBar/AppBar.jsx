@@ -4,13 +4,14 @@ import { LoginForm } from "../LoginForm/LoginForm"
 import './AppBar.css';
 import { useDispatch, useSelector } from "react-redux";
 import { handleFrontBack } from "../redux/frontBackSlice/frontBackSlice"
+import { selectError, selectIsLoading } from "../redux/selectors";
 
 
 export const AppBar = () => {
 
 	const dispatch = useDispatch()
-	const error = useSelector(state => state.contacts.error)
-	const isLoading = useSelector(state => state.contacts.isLoading)
+	const error = useSelector(selectError)
+	const isLoading = useSelector(selectIsLoading)
 	const handleChange = (e) => {
 		const value = e.target.checked
 		dispatch(handleFrontBack(value))
@@ -54,8 +55,6 @@ export const AppBar = () => {
 					</div>
 				</div>
 			}
-
-
 		</>
 	)
 }

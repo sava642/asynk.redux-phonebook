@@ -4,10 +4,11 @@ import { addContact } from "../redux/operations"
 import shortid from 'shortid';
 import Swal from 'sweetalert2'
 import './LoginForm.css';
+import { selectContacts } from "components/redux/selectors";
 
 
 export const LoginForm = () => {
-	const arrayContacts = useSelector(state => state.contacts.arrContacts)
+	const arrayContacts = useSelector(selectContacts)
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const form = e.currentTarget
