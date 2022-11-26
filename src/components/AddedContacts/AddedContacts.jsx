@@ -5,30 +5,26 @@ import IconButton from "./IconButton";
 import { IoMdClose } from "react-icons/io";
 import { SetFilter } from "../SetFilter/SetFilter";
 import Swal from 'sweetalert2'
+import './AddedContacts.css';
 
 
 export const AddedContacts = () => {
 
 	const dispatch = useDispatch()
 	const arrayContacts = useSelector(state => state.contacts.arrContacts)
-
 	const filter = useSelector(state => state.filters)
-
 	const getVisiblContacts = arrayContacts.filter(contact =>
-		contact.name.toLowerCase().includes(filter.toLowerCase())
-	)
-
+		contact.name.toLowerCase().includes(filter.toLowerCase()))
 	if (filter.length && getVisiblContacts.length === 0) {
 		Swal.fire('Contact not found')
 	}
-
 
 	return (
 		<div className="card-back">
 			<div className="center-wrap">
 				<div className="section text-center">
 					<SetFilter />
-					<ul>
+					<ul className="ul-list-contacts">
 						{getVisiblContacts.map(({ id, name, number }, index) => (
 							<li key={id}>
 								<span style={{ marginRight: 15, textAlign: "center" }}>{index + 1}</span>

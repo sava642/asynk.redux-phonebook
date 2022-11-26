@@ -107,6 +107,7 @@ h6 span {
 	margin-top: 60px;
 }
 
+
 .mx-auto {
 	margin: 40px 0px auto auto;
 
@@ -333,4 +334,10 @@ h6 span {
 
 .first {
 	padding-left: 0 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.card-3d-wrap {
+		width: 340px;
+	}
 }
