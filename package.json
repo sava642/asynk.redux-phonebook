@@ -1,8 +1,8 @@
 {
-  "name": "asynk.redux-pfonebook",
+  "name": "asynk.redux-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sava642.github.io/asynk.redux-pfonebook/",
+  "homepage": "https://sava642.github.io/asynk.redux-phonebook/",
   "dependencies": {
     "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.0",
