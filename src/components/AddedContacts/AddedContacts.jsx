@@ -18,7 +18,7 @@ export const AddedContacts = () => {
 		contact.name.toLowerCase().includes(filter.toLowerCase())
 	)
 
-	if (getVisiblContacts.length === 0) {
+	if (filter.length && getVisiblContacts.length === 0) {
 		Swal.fire('Contact not found')
 	}
 
